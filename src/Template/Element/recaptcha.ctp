@@ -13,6 +13,7 @@ var CaptchaCallback = function() {
     data-theme="<?= $recaptcha['theme'] ?>"
     data-type="<?= $recaptcha['type'] ?>"
     data-size="<?= $recaptcha['size'] ?>"
+    data-callback="recaptcha_callback"
     async defer>
 </div>
 <noscript>
