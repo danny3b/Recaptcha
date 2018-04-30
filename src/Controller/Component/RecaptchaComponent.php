@@ -36,7 +36,7 @@ class RecaptchaComponent extends Component
     public function initialize(array $config = [])
     {
         $this->setConfig($config);
-        $this->_registry->getController()->viewBuilder()->getHelpers(['Recaptcha.Recaptcha' => $this->_config]);
+        $this->_registry->getController()->viewBuilder()->setHelpers(['Recaptcha.Recaptcha' => $this->_config]);
     }
 
     /**
