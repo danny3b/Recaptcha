@@ -57,8 +57,19 @@ Display recaptcha in your view:
     <?= $this->Form->create() ?>
     <?= $this->Form->control('email') ?>
     <?= $this->Recaptcha->display() ?>  // Display recaptcha box in your view, if configure enable = false, nothing to display here
-    <?= $this->Form->submit() ?>
+    <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
+```
+
+Enable button on callback if recaptcha successful:
+```
+    <?= $this->Form->button(__('Submit'), ['disabled']) ?>
+    
+    <script>
+        function recaptcha_callback(){
+            $('button[type="submit"]').prop("disabled", false);
+        }
+    </script>
 ```
 
 Verify in your controller function
